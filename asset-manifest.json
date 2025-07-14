@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/litfind/static/css/main.f855e6bc.css",
+    "main.js": "/litfind/static/js/main.7b96dc59.js",
+    "static/js/453.1e5d2e34.chunk.js": "/litfind/static/js/453.1e5d2e34.chunk.js",
+    "static/media/logo.svg": "/litfind/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/litfind/index.html",
+    "main.f855e6bc.css.map": "/litfind/static/css/main.f855e6bc.css.map",
+    "main.7b96dc59.js.map": "/litfind/static/js/main.7b96dc59.js.map",
+    "453.1e5d2e34.chunk.js.map": "/litfind/static/js/453.1e5d2e34.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.7b96dc59.js"
+  ]
+}
