@@ -34,14 +34,14 @@ function SearchResult({keyword}){
     return(
       <div>
         <h2>아직 입력된 검색어가 없습니다!</h2>
-        <div className='detail'>위의 검색창에 작가나 제목을 입력해보세요.</div>
+        <div className='detail'>위의 검색창에 작가 또는 제목을 입력해보세요.</div>
       </div>
     )
   }
 
   return(
     <div className='search-container'>
-      <h2>{keyword}<span className='detail'>에 대한 검색 결과(</span>{modernNovelRows.length}<span className='detail'>)</span></h2>
+      <h2>{keyword}<span className='detail'>의 검색 결과(</span>{modernNovelRows.length}<span className='detail'>)</span></h2>
       <div className='search-list'>
         {modernNovelRows.map((item, index) => (
           <SearchItem key={`searchItem-${index}`} item={item}></SearchItem>
