@@ -33,7 +33,7 @@ function SearchResult({keyword}){
   if(!keyword){
     return(
       <div>
-        <h2>아직 입력된 검색어가 없습니다!</h2>
+        <h2 style={{marginTop: 0, marginBottom: '.5rem'}}>아직 입력된 검색어가 없습니다!</h2>
         <div className='detail'>위의 검색창에 작가 또는 제목을 입력해보세요.</div>
       </div>
     )
