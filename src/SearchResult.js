@@ -41,7 +41,7 @@ function SearchResult({keyword}){
 
   return(
     <div className='search-container'>
-      <h2>{keyword}<span className='detail'>의 검색 결과(</span>{modernNovelRows.length}<span className='detail'>)</span></h2>
+      <h2 style={{marginTop: 0, marginBottom: '.5rem'}}>{keyword}<span className='detail'>의 검색 결과(</span>{modernNovelRows.length}<span className='detail'>)</span></h2>
       <div className='search-list'>
         {modernNovelRows.map((item, index) => (
           <SearchItem key={`searchItem-${index}`} item={item}></SearchItem>
