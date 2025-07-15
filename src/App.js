@@ -24,7 +24,7 @@ function SearchForm({handleFormChange}){
 function Credit(){
   return(
     <div className='row-container detail'>
-      <div>litfind: CSAT Literature Finder</div>
+      <div><a href='https://github.com/zanmulgyeol/litfind'>litfind: CSAT Literature Finder</a></div>
       <div className='detail'>© 2025 <a href='https://github.com/zanmulgyeol'>zanmulgyeol</a></div>
     </div>
   )
