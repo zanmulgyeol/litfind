@@ -7,7 +7,7 @@ function Title(){
   return(
     <div className='box'>
       <h1>수능 문학 검색기 β</h1>
-      <div className='detail'>수능, 모의평가, 학력평가, EBS 연계교재에 출제된 문학 작품을 검색해보세요.<span className='subdetail'>※ 현재 현대 소설, 극만 지원</span></div>
+      <div className='detail'>수능, 모의평가, 학력평가, EBS 연계교재에 출제된 문학 작품을 검색해보세요.<span className='subdetail'>※ 현재 현대소설, 수필, 극만 지원</span></div>
       <div className='detail'>작품 카드 클릭 시 설명과 함께 복사됩니다.</div>
     </div>
   )

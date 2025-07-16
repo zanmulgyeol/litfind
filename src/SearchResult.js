@@ -3,7 +3,7 @@ import * as XLSX from 'xlsx';
 import SearchItem from './SearchItem';
 
 function SearchResult({keyword}){
-  const [modernNovelRows, setModernNovelRows] = useState([]);
+  const [rows, setRows] = useState([]);
 
   useEffect(() => {
     if(!keyword) return;
@@ -24,7 +24,7 @@ function SearchResult({keyword}){
         return a.includes(keyword) || b.includes(keyword);
       });
 
-      setModernNovelRows(matches);
+      setRows(matches);
     }
 
     loadAndFilter().catch(console.error);
@@ -41,9 +41,9 @@ function SearchResult({keyword}){
 
   return(
     <div className='search-container'>
-      <h2 style={{marginTop: 0, marginBottom: '.5rem'}}>{keyword}<span className='detail'>의 검색 결과(</span>{modernNovelRows.length}<span className='detail'>)</span></h2>
+      <h2 style={{marginTop: 0, marginBottom: '.5rem'}}>{keyword}<span className='detail'>의 검색 결과(</span>{rows.length}<span className='detail'>)</span></h2>
       <div className='search-list'>
-        {modernNovelRows.map((item, index) => (
+        {rows.map((item, index) => (
           <SearchItem key={`searchItem-${index}`} item={item}></SearchItem>
         ))}
       </div>
