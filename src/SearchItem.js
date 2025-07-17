@@ -2,7 +2,7 @@ import React from 'react';
 import { useCopyToClipboard } from 'usehooks-ts';
 
 function SearchItem({item}){
-  const litType = {'modernNovel': '현대소설', 'essay': '수필', 'drama': '극'};
+  const litType = {'modernPoetry': '현대시', 'modernNovel': '현대소설', 'essay': '수필', 'drama': '극'};
   const type = item[9];
 
   const [copiedText, copy] = useCopyToClipboard();
