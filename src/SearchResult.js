@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import * as XLSX from 'xlsx';
 import SearchItem from './SearchItem';
 
-function SearchResult({keyword}){
+function SearchResult({keyword, searchMode, accurateMode}){
   const [rows, setRows] = useState([]);
 
   useEffect(() => {
@@ -19,16 +19,25 @@ function SearchResult({keyword}){
 
       // 필터링
       const matches = data.filter(row => {
-        const a = row[0]?.toString() || '';
-        const b = row[1]?.toString() || '';
-        return a.includes(keyword) || b.includes(keyword);
+        const author = row[0]?.toString() || '';
+        const title = row[1]?.toString() || '';
+
+        if(accurateMode){
+          if(searchMode === 'author') return author === keyword;
+          else if(searchMode === 'title') return title === keyword;
+          else return author === keyword || title === keyword; // all
+        }else{
+          if(searchMode === 'author') return author.includes(keyword);
+          else if(searchMode === 'title') return title.includes(keyword);
+          else return author.includes(keyword) || title.includes(keyword); // all
+        }
       });
 
       setRows(matches);
     }
 
     loadAndFilter().catch(console.error);
-  }, [keyword]);
+  }, [keyword, searchMode, accurateMode]);
 
   if(!keyword){
     return(

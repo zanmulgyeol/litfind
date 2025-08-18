@@ -13,10 +13,30 @@ function Title(){
   )
 }
 
-function SearchForm({handleFormChange}){
+function SearchForm({handleFormChange, searchMode, setSearchMode, setAccurateMode}){
+  const search_options = [
+    {'id': 'all', 'label': '전체'},
+    {'id': 'author', 'label': '작가'},
+    {'id': 'title', 'label': '제목'},
+  ]
+
   return(
-    <div className='box'>
-      <input type='text' onChange={handleFormChange} placeholder='검색어 입력: 작가 또는 제목'></input>
+    <div className='box' style={{display: 'flex'}}>
+      <input type='text' onChange={handleFormChange} placeholder='검색어 입력: 작가 또는 제목' id='search-input'></input>
+      <div style={{display: 'flex', marginLeft: '.5rem'}}>
+        {search_options.map((opt) => (
+          <div>
+            <label key={opt.id} for={`searchMode-${opt.id}`}>{opt.label}</label>
+            <input type='radio' value={opt.id} checked={searchMode === opt.id} onChange={(e) => setSearchMode(e.target.value)} id={`searchMode-${opt.id}`} name={`searchMode-${opt.id}`}></input>
+          </div>
+        ))}
+      </div>
+      <div style={{marginLeft: '.5rem'}}>
+        <div>
+          <label key='accurate' for='accurateMode'>정확히 일치</label>
+          <input type='checkbox' onChange={(e) => setAccurateMode(e.target.checked)} id='accurate' name='accurate'></input>
+        </div>
+      </div>
     </div>
   )
 }
@@ -32,6 +52,8 @@ function Credit(){
 
 function App(){
   const [keyword, setKeyword] = useState('');
+  const [searchMode, setSearchMode] = useState('all');
+  const [accurateMode, setAccurateMode] = useState(false);
 
   const handleFormChange = (e) => {
     setKeyword(e.target.value);
@@ -41,10 +63,10 @@ function App(){
     <div className='App'>
       <header>
         <Title></Title>
-        <SearchForm handleFormChange={handleFormChange}></SearchForm>
+        <SearchForm handleFormChange={handleFormChange} searchMode={searchMode} setSearchMode={setSearchMode} setAccurateMode={setAccurateMode}></SearchForm>
       </header>
       <main className='box'>
-        <SearchResult keyword={keyword}></SearchResult>
+        <SearchResult keyword={keyword} searchMode={searchMode} accurateMode={accurateMode}></SearchResult>
       </main>
       <footer>
         <Credit></Credit>

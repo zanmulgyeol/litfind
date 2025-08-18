@@ -52,7 +52,7 @@ a:hover{
   text-underline-offset: .2rem;
 }
 
-input{
+#search-input{
   font-family: 'PyeongChang', sans-serif;
   font-size: 1rem;
   width: 25rem;
