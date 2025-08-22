@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/litfind/static/css/main.720c2b2d.css",
-    "main.js": "/litfind/static/js/main.b721f4ec.js",
+    "main.js": "/litfind/static/js/main.afe67e3c.js",
     "static/js/453.1e5d2e34.chunk.js": "/litfind/static/js/453.1e5d2e34.chunk.js",
     "static/media/PyeongChang-Bold.otf": "/litfind/static/media/PyeongChang-Bold.8a12d2a815b2d912e6a4.otf",
     "static/media/PyeongChang-Regular.otf": "/litfind/static/media/PyeongChang-Regular.d0ee652b638590b3d72a.otf",
     "static/media/PyeongChangPeace-Light.otf": "/litfind/static/media/PyeongChangPeace-Light.dad7ef5afd3ac89c57a6.otf",
     "index.html": "/litfind/index.html",
     "main.720c2b2d.css.map": "/litfind/static/css/main.720c2b2d.css.map",
-    "main.b721f4ec.js.map": "/litfind/static/js/main.b721f4ec.js.map",
+    "main.afe67e3c.js.map": "/litfind/static/js/main.afe67e3c.js.map",
     "453.1e5d2e34.chunk.js.map": "/litfind/static/js/453.1e5d2e34.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.720c2b2d.css",
-    "static/js/main.b721f4ec.js"
+    "static/js/main.afe67e3c.js"
   ]
 }
